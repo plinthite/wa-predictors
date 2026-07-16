@@ -1,10 +1,13 @@
-# wa-predictors
 
-# s3  dsm-wa/dsm-wa-gpu/
-#         cpvariates (2026 current covariates.  Includes fathomdem)
-#         tiles_wa_500  (2024 and earlier.  Mostly SLGA, with some additions)
-#         tiles_wa_new_500 (2025 covariates, used for rvg v1 models and early version soil dsm products. Includes fabdem)
-#         tiles_wa_500_fast_tiler  (2026 current covariates. Includes fathomdem)
-#
+# WA Predictors
 
-# s3   vegetation-mapping/covariates (2025 covariates, used for rvg v1 models and early version soil dsm products. Includes fabdem)
+## Data locations in s3 bucket
+
+| Rasters | Tiles | Notes |
+|------|----------------|--------|
+|`dsm-wa/dsm-wa-gpu/covariates/`|`/dsm-wa/dsm-wa-gpu/tiles_wa_500_fast_tiler/` | 2026 Current covariate set. Includes **FathomDEM**. |
+|`covariates/` | `dsm-wa/dsm-wa-gpu/tiles_wa_new_500` | 2025 Used for **RVG v1 models** and early soil DSM products. Includes **FABDEM**. |
+| `karen-nimbus/WA_state_covs/` | `dsm-wa/dsm-wa-gpu/tiles_wa_500` | 2024 and earlier. Legacy covariate set, primarily based on **SLGA** predictors with some WA updates. Older covariate development files here.  |
+
+**Note:** 2025 Relief predictors were based on **FABDEM**, while current production Relief covariates use **FathomDEM**.
+
